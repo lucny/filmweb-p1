@@ -97,6 +97,20 @@
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    var myCarousel = document.getElementById('carouselId');
+
+    myCarousel.addEventListener('slide.bs.carousel', function () {
+        console.log('Změna obrázku');
+        let r = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let color = `rgb(${r}, ${b}, ${g})`;
+        document.querySelector('body').style.backgroundColor = color;
+        document.querySelector('h1').style
+        .setProperty("color", color, "important");
+    })
+  </script>
 </body>
 
 </html>
